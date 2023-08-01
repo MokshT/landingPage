@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7; /* Light gray background */
+    background: linear-gradient(135deg, #ffaf00, #f72222);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 100px;
+    filter: invert(1);
+    animation: spin 2s infinite;
+}
+
+.header a.logo img
+{
+    position: relative;
+    max-width: 100px;
+    
+}
+
+@keyframes spin 
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }
+}
+
+header .logo img:hover
+{
+    transform: rotate(360deg);
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #fff; /* White links */
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #ffd700; /* Gold links on hover */
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+    color: #fff; /* White text */
+}
+
+.content .textBox h2 {
+    color: #ffd700; /* Gold heading text */
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span {
+    color: #ffd700; /* Green span text */
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p {
+    color: #fff; /* White paragraph text */
+}
+
+.content .textBox a
+{
+    background: #ffd700;
+}
+
+.content .imgBox {
+    position: relative;
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 340px;
+    border-radius: 50%; /* Rounded image shape */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+    transition: transform 0.3s;
+}
+
+.content .imgBox img:hover {
+    transform: scale(1.1); /* Slightly scale up the image on hover */
+}
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.thumb li img {
+    max-width: 60px;
+    border-radius: 50%; /* Rounded thumbnail image shape */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
+    border: 4px solid #017143;
+}
+
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(0);
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right);
+    z-index: 0; /* Ensure the circle is behind the image */
+}
+
+.circle::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 340px;
+    background: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

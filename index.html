@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Luffy's Gears Landing Page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="./pics/logo.jpeg" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" onclick="imgSlider('./pics/Gear2.jpeg', 'Gear Second', '#017143' ,'Gear Second is a technique used by Luffy to enhance his speed and power dramatically. He pumps his blood rapidly to his muscles, providing a massive increase in strength and agility for a short duration.')">Gear Second</a></li>
+                <li><a href="#" onclick="imgSlider('./pics/Gear3.jpeg', 'Gear Third', '#eb7495' ,'Gear Third is a powerful technique where Luffy inflates his bones and muscles, giving him the strength and size of a giant. It grants him tremendous power and the ability to perform devastating attacks.')">Gear Third</a></li>
+                <li><a href="#" onclick="imgSlider('./pics/Gear4.jpeg', 'Gear Fourth', '#d752b1' ,'Gear Fourth combines Luffy\'s rubber powers with Haki to significantly boost his strength, speed, and defense. His body takes on a hybrid form of human, rubber, and Boundman, greatly increasing his combat capabilities.')">Gear Fourth</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Luffy's Gears</h2>
+                <p>Explore Monkey D. Luffy's incredible Gears and their amazing abilities in the world of One Piece!</p>
+            </div>
+        
+        <div class="imgBox">
+            <img src="./pics/gears_.jpeg" class="luffy-gear" alt="Luffy Gear Second">
+        </div>
+        </div>
+        <ul class="thumb">
+            <li>
+                <img src="./pics/thumbG2.jpeg" onclick="imgSlider('./pics/Gear2.jpeg', 'Gear Second', '#017143' ,'Gear Second is a technique used by Luffy to enhance his speed and power dramatically. He pumps his blood rapidly to his muscles, providing a massive increase in strength and agility for a short duration.')">
+            </li>
+            <li>
+                <img src="./pics/thumbG3.jpeg" onclick="imgSlider('./pics/Gear3.jpeg', 'Gear Third', '#eb7495' ,'Gear Third is a powerful technique where Luffy inflates his bones and muscles, giving him the strength and size of a giant. It grants him tremendous power and the ability to perform devastating attacks.')">
+            </li>
+            <li>
+                <img src="./pics/thumbG4.png" onclick="imgSlider('./pics/Gear4.jpeg', 'Gear Fourth', '#d752b1' ,'Gear Fourth combines Luffy\'s rubber powers with Haki to significantly boost his strength, speed, and defense. His body takes on a hybrid form of human, rubber, and Boundman, greatly increasing his combat capabilities.')">
+            </li>
+        </ul>
+        <ul class="sci">
+            <!-- Social media icons (if any) -->
+        </ul>
+    </section>
+    
+    <script type="text/javascript">
+        function imgSlider(imgSrc, gearName, color, gearDescription) {
+            const image = document.querySelector('.luffy-gear');
+            const textBox = document.querySelector('.textBox');
+
+            image.src = imgSrc;
+            textBox.innerHTML = `
+                <h2>${gearName}</h2>
+                <p>${gearDescription}</p>
+                <a href="#"> Learn More</p>
+            `;
+
+            changeCircleColor(color);
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
